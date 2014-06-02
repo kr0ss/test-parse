@@ -34,18 +34,24 @@ $(function () {
 		});
 	});
 
-	$('#segundo').on('submit', function (e) {
-		e.preventDefault();
-
-		console.log('enviando');
-
+	$('#login').on('submit', function(){
 		var data = {};
-		data.text = $('#texto').val();
-		data.tercero = $('#tercero').val();
+		data.user = $('#username').val();
+		data.email = $('#email').val();
+		data.password = $('#password').val();
 
-		var objeto = new SegundoObjeto();
+		var user = new Parse.User();
+		user.set("username", data.user);
+		user.set("password", data.password);
+		user.set("email", data.email);
 
-		objeto.save(data, {
+		user.signUp(null, {
+		  success: function(user) {
+		  	alert('enviado')
+		  },
+		  error: function(user, error) {
+		    console.log("Error: " + error.code + " " + error.message);
+		  }
 		});
 	});
 });
