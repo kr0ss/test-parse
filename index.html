@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Parse</title>
+	<link rel="stylesheet" href="/css/normalize.css"/>
+	<link rel="stylesheet" href="/css/foundation.css"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<div id="container">
+		<div class="inner small-6 large-centered columns">
+			<form id="commentForm">
+				<legend>Formulario</legend>
+				<div class="input name">
+					<label for="name">Nombre</label>
+					<input type="text" id="name" required>
+				</div>
+
+				<div class="input email">
+					<label for="email">Email</label>
+					<input type="text" id="email" required>
+				</div>
+
+				<div class="input asunto">
+					<label for="asunto">Asunto</label>
+					<input type="text" id="asunto" required>
+				</div>
+
+				<div class="input text">
+					<label for="text">Mensaje</label>
+					<textarea name="comments" id="comments" cols="30" rows="10" required></textarea>
+				</div>
+
+				<input type="submit" value="enviar" class="button">
+			</form>
+		</div>
+	</div>
+	<script src="/js/jquery.js"></script>
+	<script src="/js/default.js"></script>
+	<script src="/js/parse-1.2.18.js"></script>
+    <script src="js/foundation.min.js"></script>
+</body>
+</html>
